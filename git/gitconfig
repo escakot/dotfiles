@@ -1,0 +1,68 @@
+[user]
+  name = Errol Cheong
+  email = escakot@gmail.com
+
+[alias]
+  cm = commit -m
+  can = commit --amend --no-edit
+  cannon = "!f() { git can && git pfwl; }; f"
+  del = branch -D
+  ll = log -1
+  l = log
+  new = "!f() { git checkout master && git pull && git checkout -b $1; }; f"
+  pfwl = push --force-with-lease
+  sha = rev-parse HEAD
+  shas = rev-parse --short HEAD
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
+  interactive = auto
+  grep = auto
+  showBranch = auto
+
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+  pager = cat | diff-so-fancy
+
+[interactive]
+	diffFilter = diff-so-fancy --patch
+
+[pull]
+  ff = only
+  rebase = true
+
+[push]
+  default = tracking
+
+[fetch]
+  prune = true
+
+[github]
+  user = escakot
+
+[rerere]
+  enabled = 1
+
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
+
+[color "diff"]
+  meta = yellow
+  frag = magenta bold
+  commit = yellow bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
+
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process

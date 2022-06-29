@@ -1,0 +1,49 @@
+### ZSH Configs ###
+export ZSH="/Users/echeong/.oh-my-zsh"
+
+ZSH_THEME="kolo"
+
+# Turn case-sensitive completion off so _ and - will be interchangeable.
+HYPHEN_INSENSITIVE="true"
+# Automatically update without prompting.
+DISABLE_UPDATE_PROMPT="true"
+# Display red dots whilst waiting for completion
+COMPLETION_WAITING_DOTS="true"
+
+# Custom folder than $ZSH/custom?
+ZSH_CUSTOM="$HOME/.dotfiles/zsh"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+plugins=(autojump brew fzf fzf-zsh-plugin git git-extras git-open vi-mode xcode)
+
+# Add homebrew path
+export PATH=/opt/homebrew/bin:$PATH
+BREW_PREFIX="$(brew --prefix)"
+
+# Prevent homebrew from auto-updating
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+# Load homebrew completion
+if type brew &>/dev/null; then
+    FPATH="$BREW_PREFIX/share/zsh/site-functions:$FPATH"
+fi
+
+source $ZSH/oh-my-zsh.sh
+
+# Set vim as the default editor
+export EDITOR='vim'
+
+# Enable code to execute VSCode
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# Load SpaceVim Setup
+export SPACEVIMDIR="$HOME/.dotfiles/vim/SpaceVim.d"
+
+# Load FuzzyFinder
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPS="--extended"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# Load ZSH Add-ons
+source "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
