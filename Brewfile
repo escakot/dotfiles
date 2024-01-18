@@ -30,6 +30,6 @@ cask 'visual-studio-code'
 cask 'zoom'
 
 # Android
-# brew 'scrcpy'
-# brew 'grishka/grishka/neardrop'
 # cask 'android-studio'
+# brew 'grishka/grishka/neardrop'
+# brew 'scrcpy'
