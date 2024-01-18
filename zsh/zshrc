@@ -14,7 +14,7 @@ COMPLETION_WAITING_DOTS="true"
 ZSH_CUSTOM="$HOME/.dotfiles/zsh"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(autojump brew fzf fzf-zsh-plugin git git-extras git-open vi-mode xcode)
+plugins=(autojump brew fzf fzf-zsh-plugin git git-extras git-open vi-mode xcode zmv)
 
 # Add homebrew path
 export PATH=/opt/homebrew/bin:$PATH
@@ -44,6 +44,13 @@ export SPACEVIMDIR="$HOME/.dotfiles/vim/SpaceVim.d"
 export FZF_DEFAULT_OPS="--extended"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+# Load ZMV
+autoload -Uz zmv
+
 # Load ZSH Add-ons
 source "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+# Android
+# export PATH="$PATH:/Users/echeong/Library/Android/sdk/platform-tools/"
+# export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
