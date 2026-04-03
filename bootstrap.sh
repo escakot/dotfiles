@@ -66,7 +66,7 @@ cp ./git/gitconfig "$HOME/.gitconfig"
 
 # Configure vim
 info "Configuring ${CYAN}Vim"
-sh -c "$(curl -sLf https://spacevim.org/install.sh)"
+sh -c "$(curl -sLf https://raw.githubusercontent.com/SpaceVim/SpaceVim/master/install.sh)"
 
 # Configuring macOS defaults
 info "Configuring ${CYAN}macOS defaults"

@@ -1,5 +1,5 @@
 ### ZSH Configs ###
-export ZSH="/Users/echeong/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="kolo"
 
@@ -14,7 +14,7 @@ COMPLETION_WAITING_DOTS="true"
 ZSH_CUSTOM="$HOME/.dotfiles/zsh"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(autojump brew fzf fzf-zsh-plugin git git-extras git-open vi-mode xcode zmv)
+plugins=(autojump brew fzf fzf-zsh-plugin git git-extras git-open vi-mode xcode)
 
 # Add homebrew path
 export PATH=/opt/homebrew/bin:$PATH
