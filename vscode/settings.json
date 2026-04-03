@@ -1,0 +1,13 @@
+{
+  "files.associations": {
+    "Dangerfile*": "ruby",
+    "Appfile": "ruby",
+    "Fastfile": "ruby",
+    "Matchfile": "ruby"
+  },
+  "files.autoSave": "afterDelay",
+  "telemetry.telemetryLevel": "off",
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
