@@ -1,11 +1,12 @@
 
 alias :q='exit'
 alias cat='bat -P'
-# alias ls="eza -lah"
+alias ls="eza -lah"
 alias reload="source ~/.zshrc"
 alias zshrc="vim ~/.zshrc"
 alias gitconfig="vim ~/.gitconfig"
 alias dotfiles="cd ~/.dotfiles"
+alias vim="nvim"
 alias xcode="xcode-select -p"
 
 # GIT aliases
